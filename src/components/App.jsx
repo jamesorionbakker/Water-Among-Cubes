@@ -26,22 +26,26 @@ export default function App(props) {
 
     return (
         <main>
-            <label htmlFor="width-input">Width:</label>
-            <input
-                id="width-input"
-                name="w"
-                type="number"
-                value={mapSize.w === 0 ? '' : mapSize.w}
-                onChange={changeDimension}
-            />
-            <label htmlFor="height-input">Height:</label>
-            <input
-                id="height-input"
-                name="h"
-                type="number"
-                value={mapSize.h === 0 ? '' : mapSize.h}
-                onChange={changeDimension}
-            />
+            <div className="input-container">
+                <label htmlFor="width-input">Width:</label>
+                <input
+                    id="width-input"
+                    name="w"
+                    type="number"
+                    value={mapSize.w === 0 ? '' : mapSize.w}
+                    onChange={changeDimension}
+                />
+            </div> 
+            <div className="input-container">
+                <label htmlFor="height-input">Height:</label>
+                <input
+                    id="height-input"
+                    name="h"
+                    type="number"
+                    value={mapSize.h === 0 ? '' : mapSize.h}
+                    onChange={changeDimension}
+                />
+            </div>
             <div
                 style={{
                     gridTemplateColumns: `repeat(${mapSize.w}, 1fr)`,
